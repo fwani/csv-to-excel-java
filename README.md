@@ -34,8 +34,16 @@
 
     <repositories>
         <repository>
-            <id>github</id>
-            <url>https://github.com/fwani/fwani-maven-repo/raw/main</url>
+            <id>github-fwani-releases</id>
+            <url>https://github.com/fwani/fwani-maven-repo/raw/main/releases</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>github-fwani-snapshots</id>
+            <url>https://github.com/fwani/fwani-maven-repo/raw/main/snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
