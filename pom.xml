@@ -14,6 +14,7 @@
         <poi.version>5.2.3</poi.version>
         <revision>0.0.1</revision>
         <github.global.server>github</github.global.server>
+        <site.path>snapshots</site.path>
     </properties>
 
     <dependencies>
@@ -78,10 +79,11 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.12</version>
                 <configuration>
-                    <message>Maven artifacts for ${project.version}</message>
+                    <message>Maven artifacts for ${project.groupId}:${project.artifactId}:${project.version}</message>
                     <noJekyll>true</noJekyll>
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
                     <branch>refs/heads/main</branch>
+                    <path>${site.path}</path>
                     <includes><include>**/*</include></includes>
                     <repositoryName>fwani-maven-repo</repositoryName>
                     <repositoryOwner>fwani</repositoryOwner>
