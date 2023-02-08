@@ -8,6 +8,43 @@
 
 ## 사용방법
 
+### 0. 세팅 추가
+
+- `settings.xml` 설정
+
+```xml
+<server>
+    <id>github</id>
+    <username>${github 유저명}</username>
+    <password>${github 토큰}</password>
+</server>
+```
+
+- `pom.xml` 에 설정 추가
+
+```xml
+<project>
+    <dependencies>
+        <dependency>
+            <groupId>pe.fwani.convert</groupId>
+            <artifactId>csv-to-excel</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://github.com/fwani/fwani-maven-repo/raw/main</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
+```
+
 ### 1. 전체 데이터 변환
 
 ```java
@@ -59,31 +96,4 @@ class Example {
 
 ```shell
 ./mvnw -Drevision=<버전> clean deploy -f pom.xml
-```
-
-### Install
-
-- `pom.xml` 에 설정 추가
-
-```xml
-<project>
-    <dependencies>
-        <dependency>
-            <groupId>pe.fwani.convert</groupId>
-            <artifactId>csv-to-excel</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/fwani/csv-to-excel-java</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-</project>
 ```
