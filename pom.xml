@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>pe.fwani.convert</groupId>
     <artifactId>csv-to-excel</artifactId>
-    <version>0.0.1</version>
+    <version>${revision}</version>
     <name>CsvToExcel</name>
     <description>Convert from csv file to excel file</description>
 
@@ -12,6 +12,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <poi.version>5.2.3</poi.version>
+        <revision>0.0.1</revision>
     </properties>
 
     <dependencies>
