@@ -28,7 +28,7 @@
         <dependency>
             <groupId>pe.fwani.convert</groupId>
             <artifactId>csv-to-excel</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1-java11-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -101,6 +101,7 @@ class Example {
 ### Deploy
 
 - 배포
+  - 배포 결과는 [fwani-maven-repo](https://github.com/fwani/fwani-maven-repo) 레파지토리 확인
 
 ```shell
 ./mvnw -Drevision=<버전> clean deploy -f pom.xml

@@ -9,8 +9,9 @@
     <description>Convert from csv file to excel file</description>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <poi.version>5.2.3</poi.version>
         <revision>0.0.1</revision>
         <github.global.server>github</github.global.server>
